@@ -1,0 +1,37 @@
+syntax="proto3";
+package proto;
+
+option go_package = "auth-grpc/src/delivery/pb";
+
+service UserHandler {
+  rpc Login (LoginRequest) returns (LoginResponse);
+  rpc Register (RegisterRequest) returns (RegisterResponse);
+}
+
+message User {
+  string id = 1;
+  string username = 2;
+  string email = 3;
+  string password = 4;
+}
+
+message LoginRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message LoginResponse {
+  string success = 1;
+  User user = 2;
+}
+
+message RegisterRequest {
+  string username = 1;
+  string email = 2;
+  string password = 3;
+}
+
+message RegisterResponse {
+  string success = 1;
+  User user = 2;
+}

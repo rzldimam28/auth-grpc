@@ -1,0 +1,7 @@
+db_user: "user"
+db_password: "password"
+db_name: "db_name"
+db_host: "localhost"
+db_port: 3306
+
+app_port: ":50051"
